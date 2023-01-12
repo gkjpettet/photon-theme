@@ -3,7 +3,13 @@
         <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
     </div>
 
-    <h1 class="gh-article-title">{{title}}</h1>
+    {{is "home"}}
+    <a href="{{url}}">
+        <h1 class="gh-article-title">{{title}}</h1>
+    </a>
+    {{else}}
+        <h1 class="gh-article-title">{{title}}</h1>
+    {{/is}}
 
     {{#if custom_excerpt}}
         <p class="gh-article-excerpt">{{custom_excerpt}}</p>
