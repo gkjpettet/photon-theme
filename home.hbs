@@ -4,12 +4,12 @@
     {{#foreach posts limit="10"}}
         <article class="gh-article {{post_class}}">
             {{> content}}
+            {{#if @last}}
+                {{! Ignore }}
+            {{else}}
+                {{! Spacer after each post except the last one }}
+                <hr />
+            {{/if}}
         </article>
-        {{#if @last}}
-            {{! Ignore }}
-        {{else}}
-            {{! Spacer after each post except the last one }}
-            <hr />
-        {{/if}}
     {{/foreach}}
 </main>
