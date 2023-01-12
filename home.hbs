@@ -5,5 +5,11 @@
         <article class="gh-article {{post_class}}">
             {{> content}}
         </article>
+        {{#if @last}}
+            {{! Ignore }}
+        {{else}}
+            {{! Spacer after each post except the last one }}
+            <hr />
+        {{/if}}
     {{/foreach}}
 </main>
