@@ -484,14 +484,3 @@ body:not(.home-template) .gh-article-image {
         font-size: 1.6rem;
     }
 }
-
-/* 
-Original Digest theme overrides 
-*/
-.homepage-post-separator {
-    /* The bullet between posts on the home page */
-    text-align: center; 
-    font-size: 2em; 
-    padding: 1em; 
-    color: var(--color-secondary-text);
-}

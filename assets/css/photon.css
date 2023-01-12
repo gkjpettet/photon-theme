@@ -1,0 +1,9 @@
+/* Additional styles  that build on the original Digest theme styles. */
+
+.homepage-post-separator {
+    /* The bullet between posts on the home page */
+    text-align: center; 
+    font-size: 2em; 
+    padding: 1em; 
+    color: var(--color-secondary-text);
+}
