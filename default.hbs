@@ -7,6 +7,7 @@
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">{{! Original Digest theme styles}}
     <link rel="stylesheet" href="{{asset "css/photon.css"}}">{{! My custom styles}}
+    <link rel="stylesheet" href="{{asset "css/rainbow-xojo-light.css"}}">{{! Xojo RainbowJS styles (light)}}
 
     {{ghost_head}}
 </head>
@@ -111,6 +112,8 @@
 {{/is}}
 
 <script src="{{asset "built/main.min.js"}}"></script>
+<script src="{{asset "js/rainbow.min.js"}}"></script> {{! RainbowJS syntax highlighting}}
+<script src="{{asset "js/xojo.js"}}"></script> {{! RainbowJS Xojo language extension}}
 
 {{ghost_foot}}
 
