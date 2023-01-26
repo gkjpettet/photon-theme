@@ -8,6 +8,10 @@
     color: var(--color-secondary-text);
 }
 
+.archive-article {
+  border: none;
+}
+
 .archive-date {
   color: var(--color-secondary-text);
   text-align: left;
