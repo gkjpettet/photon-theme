@@ -10,11 +10,13 @@
 
 .archive-article {
   border: none;
+  padding-top: 20px;
 }
 
 .archive-date {
   color: var(--color-secondary-text);
   text-align: left;
+  padding-top: 0px;
 }
 
 /* ===================
