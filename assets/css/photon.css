@@ -8,6 +8,8 @@
     color: var(--color-secondary-text);
 }
 
+.archive-date {color: red;}
+
 /* ===================
 Rainbow JS
 ======================*/
