@@ -1,33 +1,41 @@
 {{!< default}}
 
-{{!-- Archive Page --}}
-<div class="container wrapper">
-  <h1 class="archive__title">{{t "Archive"}}</h1>
-  <div class="archive__excerpt">
-    {{#get "posts"}}
-      {{t "Browse the complete archive of {total} posts." total=pagination.total}}
+<main id="gh-main" class="gh-main gh-canvas">
+    <section class="gh-pagehead">
+        <header class="gh-pagehead-content">
+            <h1 class="gh-pagehead-title">Archive</h1>
+
+            <div class="gh-pagehead-description">
+                {{#if description}}
+                    {{description}}
+                {{else}}
+                    A collection of {{plural pagination.total empty="0 issues" singular="% issue" plural="% issues"}}
+                {{/if}}
+            </div>
+        </header>
+    </section>
+
+    {{#get "posts" filter="featured:true" limit="all" as |featured|}}
+        {{#if featured}}
+            <section class="gh-section gh-section-featured">
+                <h3 class="gh-section-title"><span>Featured</span></h3>
+
+                <div class="gh-featured">
+                    {{#foreach featured}}
+                        {{> loop}}
+                    {{/foreach}}
+                </div>
+            </section>
+        {{/if}}
     {{/get}}
-  </div>
-  
-  <div class="content">
-    <div class="archive js-post-feed">
-      {{#foreach posts visibility="all"}}
-        <div class="archive-post-wrap post-year-{{date format="Y"}} js-post-card"> 
-          <div class="archive-post-label m-t m-b-sm fw-600">{{date format="YYYY"}}</div>
-          <article class="archive-post">
-            <time datetime="{{date published_at format="YYYY-MM-DD"}}"
-              class="text-acc-3">{{date published_at format="DD MMM YYYY"}}
-            </time>
 
-            <h2 class="archive-post__title fw-500 m-0 text-acc-2">
-              <a class="archive-post__link flex-1" href="{{url}}">{{title}}</a>
-            </h2>
-          </article>
+    <section class="gh-section">
+       <div class="gh-feed">
+            {{#get "posts" limit="all"}}
+                {{#foreach posts}}
+                    {{> loop}}
+                {{/foreach}}
+            {{/get}}
         </div>
-      {{/foreach}}
-    </div>
-
-    {{!-- Pagination --}}
-    {{pagination}}
-  </div>
-</div>
+    </section>
+</main>
