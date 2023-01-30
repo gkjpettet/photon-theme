@@ -6,28 +6,8 @@
             {{> content-home}}
             {{#if @last}}
                 <footer class="gh-article-footer gh-canvas{{#if @site.comments_enabled}}{{#unless @member}} no-border{{/unless}}{{#unless access}} no-border{{/unless}}{{/if}}">
-                    <nav class="gh-navigation">
-                        <div class="gh-navigation-previous">
-                            {{#prev_post}}
-                                <a class="gh-navigation-link u-hover reverse" href="{{url}}">
-                                    <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                                    <span class="u-hover-arrow">{{> icons/chevron-left}}</span>
-                                    Previous<span class="gh-navigation-hide">&nbsp;post</span>
-                                </a>
-                            {{/prev_post}}
-                        </div>
-                
+                    <nav class="gh-navigation">                
                         <a class="gh-navigation-middle" href="/archive"><span>Browse</span> all posts</a>
-                
-                        <div class="gh-navigation-next">
-                            {{#next_post}}
-                                <a class="gh-navigation-link u-hover" href="{{url}}">
-                                    Next<span class="gh-navigation-hide">&nbsp;post</span>
-                                    <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
-                                    <span class="u-hover-arrow">{{> icons/chevron-right}}</span>
-                                </a>
-                            {{/next_post}}
-                        </div>
                     </nav>
                 </footer>
             {{else}}
