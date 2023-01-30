@@ -23,6 +23,21 @@ padding-bottom: 0px;;
   padding-top: 0px;
 }
 
+/* Pagination after last post on home page. */
+.home-last-post nav {
+  margin-top: 3rem;
+  text-align: center; 
+  margin 0 auto;
+}
+
+.home-last-post a {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+font-weight: 700;
+line-height: 1.5;
+  color: var(--ghost-accent-color);
+}
+
 /* ===================
 Rainbow JS
 ======================*/
