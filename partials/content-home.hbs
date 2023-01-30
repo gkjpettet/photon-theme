@@ -1,0 +1,32 @@
+<header class="gh-article-header gh-canvas">
+    <div class="gh-article-meta">
+        <time class="gh-article-date" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+    </div>
+
+    {{#is "home"}}
+    <a href="{{url}}">
+        <h1 class="gh-article-title">{{title}}</h1>
+    </a>
+    {{else}}
+        <h1 class="gh-article-title">{{title}}</h1>
+    {{/is}}
+
+    {{#if custom_excerpt}}
+        <p class="gh-article-excerpt">{{custom_excerpt}}</p>
+    {{/if}}
+</header>
+
+{{> "feature-image"}}
+
+<section class="gh-content gh-canvas">
+    {{content}}
+</section>
+
+{{#if comments}}
+    {{^is "home"}}
+    {{! Don't show comments on the home page }}
+        <div class="gh-comments gh-canvas">
+            {{comments}}
+        </div>
+    {{/is}}
+{{/if}}
